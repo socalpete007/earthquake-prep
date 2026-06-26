@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heinemann Family | Earthquake Preparedness Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            600: '#16a34a',
+                            700: '#15803d',
+                        },
+                        accent: {
+                            blue: '#0284c7',
+                            navy: '#0f172a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col">
+
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-brand-100 text-brand-700 p-2 rounded-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                </div>
+                <div>
+                    <span class="text-xs font-semibold tracking-wider text-slate-400 uppercase">Family Hub</span>
+                    <h1 class="text-lg font-bold text-accent-navy leading-tight">Heinemann Preparedness</h1>
+                </div>
+            </div>
+            <div class="hidden md:flex space-x-1 text-sm font-medium text-slate-600">
+                <a href="#immediate" class="px-3 py-2 rounded-md hover:bg-slate-100 transition">🚨 Action</a>
+                <a href="#gobags" class="px-3 py-2 rounded-md hover:bg-slate-100 transition">🎒 Go-Bags</a>
+                <a href="#contacts" class="px-3 py-2 rounded-md hover:bg-slate-100 transition">📞 Contacts</a>
+                <a href="#utilities" class="px-3 py-2 rounded-md hover:bg-slate-100 transition">🔧 Utilities</a>
+                <a href="#drills" class="px-3 py-2 rounded-md hover:bg-slate-100 transition">🗓️ Drills</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+        
+        <section class="bg-gradient-to-br from-brand-700 to-accent-navy text-white rounded-2xl p-6 sm:p-8 shadow-xl relative overflow-hidden">
+            <div class="relative z-10 max-w-3xl">
+                <span class="bg-white/20 text-white text-xs px-3 py-1 rounded-full font-semibold uppercase tracking-wider backdrop-blur-sm">California Readiness Plan</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-3 tracking-tight">Earthquake Action Plan</h2>
+                <p class="text-emerald-100 mt-2 text-base sm:text-lg">This custom space protects and coordinates Vicky, Madeline, Ben, and Peter. Review regularly, memorize roles, and maintain local supplies.</p>
+                <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-4 border-t border-white/10 pt-6 text-sm">
+                    <div>
+                        <p class="text-white/60">Local Meeting Spot B</p>
+                        <p class="font-semibold text-white mt-1">LaRomeria Park (Tennis Courts)</p>
+                    </div>
+                    <div>
+                        <p class="text-white/60">Primary Out-of-State</p>
+                        <p class="font-semibold text-white mt-1">John Heinemann</p>
+                    </div>
+                    <div class="col-span-2 sm:col-span-1">
+                        <p class="text-white/60">Supply Status</p>
+                        <div class="flex items-center space-x-2 mt-1">
+                            <span id="global-progress" class="font-bold text-emerald-300">0%</span>
+                            <span class="text-white/40">Ready</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="immediate" class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden scroll-mt-20">
+            <div class="p-6 border-b border-slate-200 bg-slate-50 flex items-center space-x-3">
+                <span class="text-2xl">🚨</span>
+                <h2 class="text-xl font-bold text-accent-navy">1. Immediate Action: Drop, Cover, and Hold On</h2>
+            </div>
+            <div class="p-6 space-y-6">
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="p-4 bg-amber-50 border border-amber-200 rounded-lg">
+                        <h4 class="font-bold text-amber-900 flex items-center"><span class="mr-2">🏠</span> Indoors</h4>
+                        <p class="text-sm text-amber-800 mt-1"><strong>DROP</strong> to your hands and knees. <strong>COVER</strong> your head and neck under a sturdy table or desk. <strong>HOLD ON</strong> to your shelter until the shaking stops.</p>
+                    </div>
+                    <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-lg">
+                        <h4 class="font-bold text-emerald-900 flex items-center"><span class="mr-2">🌳</span> Outdoors</h4>
+                        <p class="text-sm text-emerald-800 mt-1">Clear away from buildings, trees, streetlights, and power lines. Drop, cover, and cushion your head and neck with your arms.</p>
+                    </div>
+                    <div class="p-4 bg-sky-50 border border-sky-200 rounded-lg">
+                        <h4 class="font-bold text-sky-900 flex items-center"><span class="mr-2">🚗</span> Driving</h4>
+                        <p class="text-sm text-sky-800 mt-1">Pull over safely away from overpasses, bridges, and wires. Engage the parking brake and stay inside until shaking completely ceases.</p>
+                    </div>
+                </div>
+                
+                <div class="border border-slate-200 rounded-xl overflow-hidden">
+                    <table class="w-full text-left border-collapse text-sm">
+                        <thead>
+                            <tr class="bg-slate-100 text-slate-700 font-semibold border-b border-slate-200">
+                                <th class="p-4">Safe Zones (Seek These Out)</th>
+                                <th class="p-4">Danger Zones (Avoid!)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 text-slate-600">
+                            <tr>
+                                <td class="p-4 bg-emerald-50/30">✔ Under sturdy desks or dining tables</td>
+                                <td class="p-4 bg-rose-50/30">✖ Near large windows, mirrors, or glass panels</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 bg-emerald-50/30">✔ Against interior load-bearing walls</td>
+                                <td class="p-4 bg-rose-50/30">✖ Under heavy, unanchored bookshelves or wardrobes</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 bg-emerald-50/30">✔ Hallways away from hanging light fixtures</td>
+                                <td class="p-4 bg-rose-50/30">✖ Directly inside the kitchen (falling dishes, gas connections)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="gobags" class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden scroll-mt-20">
+            <div class="p-6 border-b border-slate-200 bg-slate-50 sm:flex sm:items-center sm:justify-between space-y-4 sm:space-y-0">
+                <div class="flex items-center space-x-3">
+                    <span class="text-2xl">🎒</span>
+                    <div>
+                        <h2 class="text-xl font-bold text-accent-navy">2. Family Disaster Supply Kit</h2>
+                        <p class="text-xs text-slate-500 mt-0.5">Located in the primary hallway closet. Configured for 72 hours.</p>
+                    </div>
+                </div>
+                <div class="flex space-x-2">
+                    <button onclick="filterChecklist('all')" id="btn-all" class="px-3 py-1.5 text-xs font-semibold rounded-md bg-accent-navy text-white transition">All Items</button>
+                    <button onclick="filterChecklist('med')" id="btn-med" class="px-3 py-1.5 text-xs font-semibold rounded-md bg-slate-100 text-slate-600 hover:bg-slate-200 transition">Medical/Family Specifics</button>
+                </div>
+            </div>
+            
+            <div class="p-6">
+                <div class="overflow-x-auto border border-slate-200 rounded-xl">
+                    <table class="w-full text-left border-collapse text-sm">
+                        <thead>
+                            <tr class="bg-slate-100 text-slate-700 font-semibold border-b border-slate-200">
+                                <th class="p-4 w-12 text-center">Status</th>
+                                <th class="p-4 w-32">Category</th>
+                                <th class="p-4">Item Description</th>
+                            </tr>
+                        </thead>
+                        <tbody id="checklist-table-body" class="divide-y divide-slate-200">
+                            </tbody>
+                    </table>
+                </div>
+                
+                <div class="mt-6 bg-slate-50 rounded-xl p-4 border border-slate-200 flex items-start space-x-3">
+                    <span class="text-xl mt-0.5">🗓️</span>
+                    <div>
+                        <h4 class="font-semibold text-slate-900 text-sm">Supplies Maintenance Schedule</h4>
+                        <p class="text-xs text-slate-600 mt-1">Food, water, and batteries must be rotated every 6 months. A recurring alert is configured for the first weekend of April and October during daylight saving transitions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts" class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden scroll-mt-20">
+            <div class="p-6 border-b border-slate-200 bg-slate-50 flex items-center space-x-3">
+                <span class="text-2xl">📞</span>
+                <h2 class="text-xl font-bold text-accent-navy">3. Communications Plan & Meeting Places</h2>
+            </div>
+            <div class="p-6 space-y-8">
+                <div>
+                    <h3 class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-4">Out-of-State Emergency Contacts</h3>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                        <div class="p-4 border border-slate-200 rounded-xl bg-white shadow-xs">
+                            <span class="text-xs font-bold text-brand-600 uppercase">Contact 1</span>
+                            <h4 class="font-bold text-slate-900 mt-0.5">John Heinemann</h4>
+                            <a href="tel:3152449327" class="text-sm text-accent-blue font-medium block mt-2 hover:underline">(315) 244-9327</a>
+                        </div>
+                        <div class="p-4 border border-slate-200 rounded-xl bg-white shadow-xs">
+                            <span class="text-xs font-bold text-brand-600 uppercase">Contact 2</span>
+                            <h4 class="font-bold text-slate-900 mt-0.5">Kathleen Heinemann</h4>
+                            <a href="tel:3154846850" class="text-sm text-accent-blue font-medium block mt-2 hover:underline">(315) 484-6850</a>
+                        </div>
+                        <div class="p-4 border border-slate-200 rounded-xl bg-white shadow-xs">
+                            <span class="text-xs font-bold text-brand-600 uppercase">Contact 3</span>
+                            <h4 class="font-bold text-slate-900 mt-0.5">Luke Heinemann</h4>
+                            <a href="tel:3016060399" class="text-sm text-accent-blue font-medium block mt-2 hover:underline">(301) 606-0399</a>
+                        </div>
+                        <div class="p-4 border border-slate-200 rounded-xl bg-white shadow-xs">
+                            <span class="text-xs font-bold text-brand-600 uppercase">Contact 4</span>
+                            <h4 class="font-bold text-slate-900 mt-0.5">Sue Orecklin</h4>
+                            <a href="tel:4257537847" class="text-sm text-accent-blue font-medium block mt-2 hover:underline">(425) 753-7847</a>
+                        </div>
+                        <div class="p-4 border border-slate-200 rounded-xl bg-white shadow-xs">
+                            <span class="text-xs font-bold text-brand-600 uppercase">Contact 5</span>
+                            <h4 class="font-bold text-slate-900 mt-0.5">Joanie Hogan</h4>
+                            <a href="tel:9897737458" class="text-sm text-accent-blue font-medium block mt-2 hover:underline">(989) 773-7458</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 pt-2">
+                    <div class="p-5 border border-slate-200 rounded-xl bg-slate-50/50">
+                        <div class="flex items-center space-x-3 mb-3">
+                            <span class="p-2 bg-amber-100 rounded-lg text-amber-700 font-bold text-xs">SPOT A</span>
+                            <h4 class="font-bold text-slate-900">Immediate Evacuation Spot</h4>
+                        </div>
+                        <p class="text-sm text-slate-700 font-semibold">Front Driveway</p>
+                        <p class="text-xs text-slate-500 mt-1">Assemble here immediately if the house interior becomes structurally unsafe or requires dynamic evacuation.</p>
+                    </div>
+
+                    <div class="p-5 border border-slate-200 rounded-xl bg-slate-50/50">
+                        <div class="flex items-center space-x-3 mb-3">
+                            <span class="p-2 bg-brand-100 rounded-lg text-brand-700 font-bold text-xs">SPOT B</span>
+                            <h4 class="font-bold text-slate-900">Neighborhood Evacuation Spot</h4>
+                        </div>
+                        <p class="text-sm text-slate-700 font-semibold">LaRomeria Park • Near the Tennis Courts</p>
+                        <p class="text-xs text-slate-500 mt-1">Assemble here if access blocks prevent return to your home address or the street becomes compromised.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="utilities" class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden scroll-mt-20">
+            <div class="p-6 border-b border-slate-200 bg-slate-50 flex items-center space-x-3">
+                <span class="text-2xl">🔧</span>
+                <h2 class="text-xl font-bold text-accent-navy">4. Home Mitigation & Utility Controls</h2>
+            </div>
+            <div class="p-6">
+                <div class="grid md:grid-cols-3 gap-8">
+                    
+                    <div class="flex flex-col h-full bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs">
+                        <div class="aspect-video w-full bg-slate-100 relative overflow-hidden">
+                            <img src="https://res.cloudinary.com/dapijn1ts/image/upload/v1782514658/gas-meter_uijweb.jpg" alt="Gas Meter Shut-off Location" class="object-cover w-full h-full hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="p-5 flex-grow flex flex-col justify-between">
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-base flex items-center"><span class="w-2 h-2 bg-amber-500 rounded-full mr-2"></span> Gas Shut-Off Valve</h3>
+                                <p class="text-xs font-medium text-slate-400 mt-1 uppercase tracking-wider">Location</p>
+                                <p class="text-sm text-slate-700 font-medium">East side of house below the bathroom window.</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-100 text-xs text-slate-600 bg-slate-50 -mx-5 -mb-5 p-4">
+                                <strong>Instructions:</strong> Use the dedicated crescent wrench attached straight to the piping. Turn the valve a quarter-turn in either direction until the crossbar profile stands entirely crosswise to the pipe.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col h-full bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs">
+                        <div class="aspect-video w-full bg-slate-100 relative overflow-hidden">
+                            <img src="https://res.cloudinary.com/dapijn1ts/image/upload/v1782514657/water-shutoff_t3ckxm.jpg" alt="Water Main Shut-off Location" class="object-cover w-full h-full hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="p-5 flex-grow flex flex-col justify-between">
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-base flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Water Main Valve</h3>
+                                <p class="text-xs font-medium text-slate-400 mt-1 uppercase tracking-wider">Location</p>
+                                <p class="text-sm text-slate-700 font-medium">Front of house next to the garage and immediately below the water spicket.</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-100 text-xs text-slate-600 bg-slate-50 -mx-5 -mb-5 p-4">
+                                <strong>Instructions:</strong> Turn the handwheel valve securely clockwise until rotation stops completely to isolate the infrastructure lines.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col h-full bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs">
+                        <div class="aspect-video w-full bg-slate-100 relative overflow-hidden">
+                            <img src="https://res.cloudinary.com/dapijn1ts/image/upload/v1782514657/electrical-panel_wrfacp.jpg" alt="Electrical Panel Breaker Location" class="object-cover w-full h-full hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="p-5 flex-grow flex flex-col justify-between">
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-base flex items-center"><span class="w-2 h-2 bg-red-500 rounded-full mr-2"></span> Main Electrical Panel</h3>
+                                <p class="text-xs font-medium text-slate-400 mt-1 uppercase tracking-wider">Location</p>
+                                <p class="text-sm text-slate-700 font-medium">Back of house against the wall and near the BBQ grill.</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-100 text-xs text-slate-600 bg-slate-50 -mx-5 -mb-5 p-4">
+                                <strong>Instructions:</strong> Open outer sub-panel safety gate. Flip the distinct main circuit breaker toggle switch located firmly at the top layout down to the "OFF" position.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="drills" class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden scroll-mt-20">
+            <div class="p-6 border-b border-slate-200 bg-slate-50 flex items-center space-x-3">
+                <span class="text-2xl">🗓️</span>
+                <h2 class="text-xl font-bold text-accent-navy">5. Routine Practice & Drill Calendar</h2>
+            </div>
+            <div class="p-6 grid sm:grid-cols-2 gap-6">
+                <div class="p-5 border border-slate-100 rounded-xl bg-emerald-50/20">
+                    <span class="text-xs font-bold text-brand-700 uppercase tracking-widest bg-brand-100 px-2.5 py-1 rounded-md">Spring Event</span>
+                    <h3 class="font-bold text-slate-900 text-lg mt-3">Family Readiness Run</h3>
+                    <p class="text-sm text-slate-600 mt-1">Conducted on the <strong>Second Sunday of March</strong>. Simulates indoor drop maneuvers and utility verification runs.</p>
+                </div>
+                <div class="p-5 border border-slate-100 rounded-xl bg-sky-50/20">
+                    <span class="text-xs font-bold text-accent-blue uppercase tracking-widest bg-sky-100 px-2.5 py-1 rounded-md">Fall Event</span>
+                    <h3 class="font-bold text-slate-900 text-lg mt-3">Evacuation & Supply Check</h3>
+                    <p class="text-sm text-slate-600 mt-1">Conducted on the <strong>Second Sunday of November</strong>. Focuses on full evacuation to Spot A and Spot B along with physical inventory check.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-6 mt-12 text-center text-xs text-slate-400">
+        <p>&copy; 2026 Heinemann Family Hub. Built for resiliency and rapid utility referencing.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
